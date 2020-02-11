@@ -3,6 +3,7 @@
 #include <string>
 #include "vectorarray.h"
 #include "funcdef.h"
+#include "heapsort.h"
 using namespace std;
 struct Student {
 	string name;
@@ -73,6 +74,19 @@ int main()
 	cout << sgnum << " " << &sgnum << endl;
 	int numarray[] = { 6,1,0,5,2,9 };
 	selectsort(numarray, sizeof(numarray) / sizeof(int));
+	int numarray2[] = { 9,5,7,4,2,8 };
+	popsort(numarray2, sizeof(numarray2) / sizeof(int));
+	int numarray3[] = { 9,5,7,12,4,2,8,11 };
+	quicksort(numarray3, sizeof(numarray3) / sizeof(int));
+	int numarray4[] = { 9,5,7,12,4,2,8,11 };
+	HeapSort  heapsort = HeapSort(numarray4, sizeof(numarray4) / sizeof(4));
+	//将数组构造为大根堆
+	heapsort.adjust_heap();
+	//将大根堆数据打印出来
+	heapsort.print_data();
+	//进行堆排序
+	heapsort.heap_sort();
+	heapsort.print_data();
 	getchar();
 	return 0;
 }

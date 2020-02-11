@@ -9,6 +9,8 @@ using namespace std;
 //函数的第一个参数是指针，这样保证参数可以传入，也可以传出。
 //第二个参数为数组的长度, 实现从小到大排序
 extern void selectsort(int * parray, int nsize);
-
-
+//冒泡排序
+extern void popsort(int * parray, int nsize);
+//快速排序
+extern void quicksort(int * parray, int nsize);
 #endif //__FUNCDEF_H__

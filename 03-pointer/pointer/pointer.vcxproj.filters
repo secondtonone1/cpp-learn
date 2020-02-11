@@ -30,6 +30,9 @@
     <ClInclude Include="funcdef.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="heapsort.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -42,6 +45,9 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="funcdef.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="heapsort.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
