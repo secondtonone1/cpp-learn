@@ -147,20 +147,17 @@
   <ItemGroup>
     <ClInclude Include="funcdef.h" />
     <ClInclude Include="heapsort.h" />
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="targetver.h" />
+    <ClInclude Include="overload.h" />
+    <ClInclude Include="pointerdemo.h" />
+    <ClInclude Include="templatedemo.h" />
     <ClInclude Include="vectorarray.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="funcdef.cpp" />
     <ClCompile Include="heapsort.cpp" />
+    <ClCompile Include="overload.cpp" />
     <ClCompile Include="pointer.cpp" />
-    <ClCompile Include="stdafx.cpp">
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
-      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
-    </ClCompile>
+    <ClCompile Include="pointerdemo.cpp" />
     <ClCompile Include="vectorarray.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

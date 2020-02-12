@@ -90,4 +90,10 @@ void HeapSort::heap_sort() {
 		adjust_down(0, i);
 	}
 }
-//
+//读者可以考虑当有新的元素插入时，怎么生成大根堆
+//其实就是将新的元素放到vector末尾，然后将其向上调节，直到符合大根堆为止
+//读者自行实现
+/*
+void HeapSort::adjust_up(int nleaf, int nlen) {
+}
+*/

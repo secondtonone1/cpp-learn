@@ -4,6 +4,8 @@
 #include "vectorarray.h"
 #include "funcdef.h"
 #include "heapsort.h"
+#include "pointerdemo.h"
+#include "templatedemo.h"
 using namespace std;
 struct Student {
 	string name;
@@ -87,6 +89,18 @@ int main()
 	//½øÐÐ¶ÑÅÅÐò
 	heapsort.heap_sort();
 	heapsort.print_data();
+	pointer_demo();
+	reference_demo();
+	int nswap1 = 1;
+	int nswap2 = 2;
+	swaptemp(nswap1, nswap2);
+	cout << "nswap1  is " << nswap1 << " nswap2 is " << nswap2 << endl;
+	swaptemp(&nswap1, &nswap2);
+	cout << "nswap1  is " << nswap1 << " nswap2 is " << nswap2 << endl;
+	auto sdata1 = StudentData("zack", 100);
+	auto sdata2 = StudentData("Rolin", 99);
+	swaptemp(sdata1, sdata2);
+
 	getchar();
 	return 0;
 }
