@@ -145,10 +145,14 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="baseclass.cpp" />
+    <ClCompile Include="friendclass.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mystring.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="baseclass.h" />
+    <ClInclude Include="friendclass.h" />
     <ClInclude Include="mystring.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

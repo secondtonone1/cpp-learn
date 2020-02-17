@@ -24,9 +24,21 @@
     <ClCompile Include="mystring.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="baseclass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="friendclass.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mystring.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="baseclass.h">
+      <Filter>源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="friendclass.h">
       <Filter>源文件</Filter>
     </ClInclude>
   </ItemGroup>

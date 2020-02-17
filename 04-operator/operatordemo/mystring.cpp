@@ -17,6 +17,16 @@ MyString::MyString(char * chars, int nlen) {
 	m_nlen = nlen + 1;
 }
 
+MyString::MyString(const char * chars) {
+	int nlen = strlen(chars) + 1;
+	m_chars = new char[nlen];
+	for (int i = 0; i < nlen; i++) {
+		m_chars[i] = chars[i];
+	}
+	m_chars[nlen-1] = '\0';
+	m_nlen = nlen;
+}
+
 MyString::MyString(const MyString& mystring) {
 	//·ÀÖ¹×ÔÒýÓÃ
 	if (this == &mystring) {
@@ -58,3 +68,51 @@ MyString MyString:: operator +(const MyString & mystring) const {
 	delete[] newchars;
 	return newstring;
 }
+
+MyString & MyString:: operator = (const MyString& mystring) {
+	if (this->m_chars != NULL) {
+		delete[] this->m_chars;
+		this->m_chars = NULL;
+	}
+	this->m_chars = new char[mystring.m_nlen];
+	this->m_nlen = mystring.m_nlen;
+	for (int i = 0; i < mystring.m_nlen; i++) {
+		this->m_chars[i] = mystring.m_chars[i];
+	}
+	this->m_chars[this->m_nlen - 1] = '\0';
+	return *this;
+}
+
+bool operator < (const MyString & s1, const MyString & s2) {
+	return strcmp(s1.m_chars, s2.m_chars) < 0;
+}
+
+bool operator == (const MyString & s1, const MyString & s2) {
+	return strcmp(s1.m_chars, s2.m_chars) == 0;
+}
+
+bool operator > (const MyString & s1, const MyString & s2) {
+	return strcmp(s1.m_chars, s2.m_chars) > 0;
+}
+
+char & MyString::operator [](unsigned int n) {
+	return this->m_chars[n];
+}
+const char & MyString::operator [](unsigned int n) const {
+	return this->m_chars[n];
+}
+
+MyString & MyString::operator = (const char * msg) {
+	if (this->m_chars != nullptr) {
+		delete[] this->m_chars;
+		this->m_chars = nullptr;
+	}
+
+	int nlen = strlen(msg) + 1;
+	this->m_chars = new char[nlen];
+	strcpy_s(this->m_chars,0, msg);
+	this->m_nlen = nlen;
+	this->m_chars[nlen - 1] = '\0';
+	return *this;
+}
+
