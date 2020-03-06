@@ -96,7 +96,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
@@ -142,11 +142,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="functionbind.cpp" />
+    <ClCompile Include="functiondemo.cpp" />
+    <ClCompile Include="lambdademo.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="movedemo.cpp" />
     <ClCompile Include="shared_ptrdm.cpp" />
+    <ClCompile Include="stldemo.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="functionbind.h" />
+    <ClInclude Include="functiondemo.h" />
+    <ClInclude Include="lambdademo.h" />
+    <ClInclude Include="movedemo.h" />
     <ClInclude Include="shared_ptrdm.h" />
+    <ClInclude Include="stldemo.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
